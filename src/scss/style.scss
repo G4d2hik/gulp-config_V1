@@ -1,0 +1,29 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@import "fonts";
+body {
+    font-family: BebasNeue;
+    font-weight: 700;
+    display: flex;
+    background: url(../img/a17601b0-aad9-4b1e-8cf4-1bb7b0899a8b.jpg);
+}
+span {
+    font-size: 21px;
+    @media (max-width: 767px) {
+        font-size: 100px;
+    }
+}
+div {
+    font-size: 32px;
+    @media (max-width: 767px) {
+        border: 1px solid red;
+    }
+}
